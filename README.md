@@ -1,53 +1,48 @@
-Audio Converter Application
+# Audio Converter Usage Guide
 
-Author: Catoglu
+## Running the Application
 
-Overview
-This is a user-friendly audio converter application for macOS, built using Python and Tkinter. The application allows users to convert multiple audio files into various formats and select the desired bitrate. It includes several features for easy path selection and error handling.
+To run the application, navigate to the directory containing `audio_converter.py` and execute the following command:
 
-Features
-Multiple File Selection: Select multiple audio files for batch conversion.
-Format and Bitrate Selection: Convert files to MP3, WAV, AAC, FLAC, OGG, and AIFF formats with customizable bitrates.
-Output Path Selection: Specify the directory for saving converted files.
-Subfolder Creation: Option to create a subfolder in the selected path for organizing converted files.
-Error Logging: Logs errors during conversion to a .txt file in the specified path.
-Help Section: Detailed instructions on using the application.
-Requirements
-Python 3.x
-Tkinter
-Pydub
-Installation
-Clone the repository:
-
-bash
-Kodu kopyala
-git clone https://github.com/yourusername/audio-converter.git
-cd audio-converter
-Install the required packages:
-
-bash
-Kodu kopyala
-pip install tk
-pip install pydub
-Run the application:
-
-bash
-Kodu kopyala
+```
 python audio_converter.py
-Usage
-Select Files: Click on the "Select Files" button to choose the audio files you want to convert.
-Choose Format and Bitrate: Use the dropdown menus to select the desired format and bitrate for the conversion.
-Specify Output Path: Click on the "Select Output Path" button to choose where the converted files will be saved.
-Subfolder Option: Check the "Create subfolder" checkbox if you want the converted files to be saved in a subfolder.
-Convert Files: Click on the "Convert" button to start the conversion process.
-View Results: After the conversion is complete, a message will indicate whether the process was successful or if there were any errors.
-Help Section
-Click on the "Help" button for detailed instructions on using the application. This section includes information on file selection, format and bitrate options, output path selection, and error handling.
-Error Handling
-If any errors occur during the conversion process, they will be logged in an error_log.txt file in the specified output directory. Check this file for details on any conversion issues.
-Contributions
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+```
 
+Using the Audio Converter
+
+1. Select Files
+Click on the Select Files button to choose the audio files you want to convert. You can select multiple files.
+
+2. Choose Conversion Format and Bitrate
+Use the dropdown menus to select the desired conversion format and bitrate for your audio files.
+
+Conversion Format: Choose from MP3, WAV, AAC, FLAC, OGG, or AIFF.
+Bitrate Selection: Choose from various bitrates specific to the selected format.
+3. Select Output Path
+Click on the Select Output Path button to specify the directory where the converted files will be saved.
+
+4. Create Subfolder (Optional)
+Check the Create subfolder option if you want the converted files to be saved in a subfolder within the specified output path.
+
+5. Convert
+Click the Convert button to start the conversion process. Once the conversion is complete, you will receive a success message. If there are any errors, an error log will be created in the specified output path.
+
+6. Help
+Click the Help button for in-app instructions on how to use the application.
+
+Exiting the Application
+Click the Close button to exit the application.
+
+Build the Executable
+Run PyInstaller:
+
+Navigate to the directory containing audio_converter.py and run the following command:
+
+pyinstaller --onefile --windowed --icon=audio_converter.ico audio_converter.py
+
+--onefile: This option packages the application into a single executable file.
+--windowed: This option prevents a terminal window from appearing when the application is run.
+--icon=audio_converter.ico: This option sets the icon for the executable file.
+Locate the Executable
+After running the PyInstaller command, the executable file will be created in the dist directory. You can distribute this executable file as needed.
