@@ -1,0 +1,3 @@
+([('audio_converter',
+   '/Users/mcatoglu/Audio_Converter/v1.0/dist/audio_converter',
+   'EXECUTABLE')],)
